@@ -122,6 +122,9 @@ export const getTollPrices = async (
     const { polyline, vehicleType } = value;
     const coordinates = decode(polyline);
     const tollsIds = await findNearbyTolls(coordinates);
+    if (!tollsIds.length) {
+      return res.status(200).json({ cost: 0, tolls: [] });
+    }
     const tollsAndPrice = await Database.getRepository(Toll)
       .createQueryBuilder("toll")
       .leftJoinAndSelect("toll.prices", "price")
