@@ -1,0 +1,28 @@
+{
+  "name": "toll-price-api",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "license": "MIT",
+  "author": "Ivan Gonzalez <ivangonzalezgrc@gmail.com>",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts"
+  },
+  "dependencies": {
+    "@mapbox/polyline": "1.2.1",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "joi": "17.13.3",
+    "morgan": "1.10.0",
+    "pg": "8.13.1",
+    "reflect-metadata": "0.2.2",
+    "typeorm": "0.3.20"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.0",
+    "@types/mapbox__polyline": "1.0.5",
+    "@types/morgan": "1.9.9",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2"
+  }
+}
